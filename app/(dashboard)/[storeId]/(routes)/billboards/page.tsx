@@ -6,9 +6,9 @@ import { BillboardColumn } from "./components/columns";
 const BillboardsPage =async ({
     params
 }:{
-    params:{storeId: string}
+    params:Promise<{storeId: string}>
 }) => {
-    const { storeId } = await Promise.resolve(params);
+    const { storeId } = await params;
     const billboards = await prismadb.billboard.findMany({
         where: {
             storeId: storeId,

@@ -10,7 +10,7 @@ import { formatter } from "@/lib/utils"
 import { CreditCard, DollarSign, Package } from "lucide-react"
 
 interface DashboardPageProps{
-    params:{storeId:string}
+    params:Promise<{storeId:string}>
 }
 
 

@@ -9,7 +9,7 @@ export function MainNav({
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     ...props
 }: React.HTMLAttributes<HTMLElement>){
-    const pathname=usePathname();
+    const pathname=usePathname(); 
     const params=useParams();
 
     const routes=[
