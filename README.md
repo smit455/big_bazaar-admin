@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Admin Panel for E-commerce Project
+
+## Overview
+This is the admin panel for an e-commerce platform built using **Next.js** and **TypeScript**. The admin panel allows administrators to manage the online store effectively. Key features include creating and managing stores, billboards, products, and orders, as well as managing product attributes like colors, sizes, and prices. The panel also includes an overview page for quick insights into the platform's performance and data.
+
+## Features
+- **User Authentication**: Secure registration and login using Clerk.
+- **Store Management**: Create and manage stores for the e-commerce platform.
+- **Billboard Management**: Add and update promotional billboards displayed on the user site.
+- **Product Management**: Add, update, and delete products with attributes like colors, sizes, and prices.
+- **Order Management**: Track and manage customer orders.
+- **Overview Page**: Get quick insights into sales, orders, and other key metrics.
+- **Stripe Integration**: Secure and seamless payment processing using Stripe.
+
+## Technologies Used
+- **Framework**: Next.js
+- **Language**: TypeScript
+- **Authentication**: Clerk for user registration and login
+- **Styling**: CSS/SCSS or a CSS-in-JS solution like Tailwind CSS 
+- **Database**: Prisma
+- **Payment**: Stripe
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn package manager
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/smit455/big_bazaar-admin.git
+   cd big_bazaar-admin-admin
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up environment variables:
+   Create a `.env` file in the root directory and add the necessary environment variables. Example:
+   ```env
+   DATABASE_URL=your-database-url
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your-public-key
+   CLERK_SECRET_KEY=your-secret-key
+   NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your-cloud-name
+   STRIPE_API_KEY=your-key
+   STRIPE_WEBHOOK_SECRET=your-secret
+   FRONTEND_STORE_URL=your-store-url
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
+   The app will be available at `http://localhost:3000`.
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
+- `npm run dev`: Start the development server
+- `npm run build`: Build the application for production
+- `npm start`: Start the production server
+- `npm run lint`: Run linting
+- `npm run postinstall`: For prisma generate
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Key Features Description
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 1. User Authentication
+The admin panel uses Clerk for secure user registration and login. This ensures only authorized personnel can access the admin features.
 
-## Deploy on Vercel
+### 2. Overview Page
+The overview page provides a snapshot of the platform's performance, including sales, orders, and other essential metrics.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 3. Store Management
+Admins can create, update, and delete stores. Each store serves as a container for products, billboards, and orders.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 4. Billboard Management
+Billboards allow admins to highlight promotional content. Admins can add, update, and remove billboards.
+
+### 5. Product Management
+Admins can:
+- Add new products with details like name, description, price, and inventory.
+- Manage product attributes such as colors and sizes.
+- Update or delete existing products.
+
+### 6. Order Management
+Admins can view and manage customer orders, including order status updates (e.g., processing, shipped, delivered).
+
+### 7. Stripe Integration
+Stripe is integrated for payment processing. It securely handles transactions and webhook events to ensure smooth financial operations.
+
+
+---
