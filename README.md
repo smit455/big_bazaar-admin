@@ -17,7 +17,7 @@ This is the admin panel for an e-commerce platform built using **Next.js** and *
 - **Language**: TypeScript
 - **Authentication**: Clerk for user registration and login
 - **Styling**: CSS/SCSS or a CSS-in-JS solution like Tailwind CSS 
-- **Database**: Prisma
+- **Database**: PostgreSQL
 - **Payment**: Stripe
 
 ## Getting Started
